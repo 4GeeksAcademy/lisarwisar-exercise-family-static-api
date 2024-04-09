@@ -44,9 +44,9 @@ def get_single_member(id):
     
 @app.route("/member/<int:id>", methods=["DELETE"])
 def delete_single_member(id):
-    delete_response = jackson_family.delete_member(id)
+    jackson_family.delete_member(id)
 
-    return jsonify(["done"]), 200
+    return jsonify({"done": True}), 200
     
 @app.route("/member", methods=["POST"])
 def add_member():

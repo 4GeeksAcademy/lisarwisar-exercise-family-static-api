@@ -37,6 +37,7 @@ class FamilyStructure:
         for i in range(len(members)):
             if (members[i]["id"] == id):
                 self._members.pop(i)
+                break
         
         return "done"
 
